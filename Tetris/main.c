@@ -20,7 +20,7 @@
 #define FALL_FUNC() GetAsyncKeyState(FALL_KEY) & 0x8000
 
 #define CANVAS_WIDTH 10
-#define CANVAS_HEIGHT 20
+#define CANVAS_HEIGHT 25
 
 typedef enum {
     RED = 41,
@@ -266,6 +266,43 @@ Shape shapes[7] = {
     },
 };
 
+void welcome() {
+    printf("\033[%d;%dH\x1b[47;30m ****      ****   ************** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 9, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****   ************** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 8, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****       ******     \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 7, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****       ******     \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 6, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m **************       ******     \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 5, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m **************       ******     \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 4, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****       ******     \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 3, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****       ******     \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 2, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****   ************** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 1, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m ****      ****   ************** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+}
+
+void CLR() {
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 9, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 8, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 7, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 6, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 5, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 4, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 3, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 2, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 1, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[40;30m                                 \x1b[0m\033[%d;%dH", CANVAS_HEIGHT, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+}
+
+void G() {
+    printf("\033[%d;%dH\x1b[47;30m    ********     ********  \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 7, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m   **//////**   **//////** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 6, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m  **      //   **      //  \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 5, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m /**          /**          \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 4, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m /**    ***** /**    ***** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 3, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m //**  ////** //**  ////** \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 2, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m  //********   //********  \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 1, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+    printf("\033[%d;%dH\x1b[47;30m   ////////     ////////   \x1b[0m\033[%d;%dH", CANVAS_HEIGHT, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+}
+
 void setBlock(Block* block, Color color, ShapeId shape, bool current)
 {
     block->color = color;
@@ -441,7 +478,10 @@ void logic(Block canvas[CANVAS_HEIGHT][CANVAS_WIDTH], State* state)
 
             if (!move(canvas, state->x, state->y, state->rotate, state->x, state->y, state->rotate, state->queue[0]))
             {
-                printf("\033[%d;%dH\x1b[41m GAME OVER \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 3, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+                CLR();
+                printf("\033[%d;%dH\x1b[41m GAME OVER \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 9, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT + 5, 0);
+                printf("\033[%d;%dH\x1b[44;30m GOOD GAME \x1b[0m\033[%d;%dH", CANVAS_HEIGHT - 8, CANVAS_WIDTH * 2 + 5, CANVAS_HEIGHT , 0);
+                G();
                 exit(0);
             }
         }
@@ -451,6 +491,7 @@ void logic(Block canvas[CANVAS_HEIGHT][CANVAS_WIDTH], State* state)
 
 int main()
 {
+    
     srand(time(NULL));
     State state = {
         .x = CANVAS_WIDTH / 2,
@@ -459,7 +500,7 @@ int main()
         .rotate = 0,
         .fallTime = 0
     };
-
+    
     for (int i = 0; i < 4; i++)
     {
         state.queue[i] = rand() % 7;
@@ -481,6 +522,7 @@ int main()
 
     while (1)
     {
+        welcome();
         logic(canvas, &state);
         printCanvas(canvas, &state);
         Sleep(100);
